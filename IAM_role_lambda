@@ -1,0 +1,40 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::agnija-bucket-source/*",
+                "arn:aws:s3:::agnija-bucket-destination/*"
+            ]
+        }
+    ]
+}
+_____________________________________________________
+Go to the AWS IAM Console:
+
+Navigate to the AWS IAM Console.
+Locate the IAM Role:
+
+Find the IAM role that is associated with your Lambda function. You can find this information in the AWS Lambda console, under the "Execution role" section of your Lambda function.
+Edit the IAM Role Policy:
+
+Click on the IAM role's name to view its details.
+In the "Permissions" tab, you will see an IAM policy attached to the role. Click on the policy name to edit it.
+Attach or Replace Policy:
+
+If there is no policy attached, you may need to create a new policy. Click on "Attach policies" and search for the policy you've created. Attach it to the role.
+
+If there is already an existing policy, you can edit it to include the required permissions. Click on the policy name, then edit the policy document to include the necessary permissions.
+
+Edit Policy Document:
+
+In the policy editor, replace the existing policy document with the one I provided earlier or adjust it according to your specific requirements.
+Review and Save:
+
+Review the policy to make sure it grants the necessary permissions.
+After confirming, click on "Review policy" and then "Save changes."
